@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSで作成するドロップダウンメニュー</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css">
+    <link rel="stylesheet" href="css/sample06.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CSS DropDown Menu</h1>
+    </header>
+
+    <main class="main">
+        <ul class="base">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">OFFICE</a>
+                <ul class="parent">
+                    <li><a href="#">OFFICE A</a></li>
+                    <li><a href="#">OFFICE B</a>
+                        <ul class="child_navi">
+						    <li><a href="#">EXTRA A-A</a></li>
+						    <li><a href="#">EXTRA A-B</a></li>
+						    <li><a href="#">EXTRA A-C</a></li>
+					    </ul>
+                    </li>
+                    <li><a href="#">OFFICE C</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ABOUT</a>
+                <ul class="parent">
+                    <li><a href="#">ABOUT A</a></li>
+                    <li><a href="#">ABOUT B</a></li>
+                    <li><a href="#">ABOUT C</a></li>
+                </ul>
+            </li>
+            <li><a href="#">RECRUIT</a>
+                <ul class="parent">
+                    <li><a href="#">RECRUIT A</a></li>
+                    <li><a href="#">RECRUIT B</a></li>
+                    <li><a href="#">RECRUIT C</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTACT</a>
+                <ul class="parent">
+                    <li><a href="#">CONTACT A</a>
+					    <ul class="child_navi">
+						    <li><a href="#">EXTRA A-A</a></li>
+						    <li><a href="#">EXTRA A-B</a></li>
+						    <li><a href="#">EXTRA A-C</a></li>
+					    </ul>
+				    </li>
+					<li><a href="#">CONTACT B</a></li>
+					<li><a href="#">CONTACT C</a></li>
+				</ul>
+            </li>
+        </ul>
+    </main>
+    
+    <footer>
+        <p><small>copyright &copy; comp ecccomp.Inc</small></p>
+    </footer>
+</body>
+</html>

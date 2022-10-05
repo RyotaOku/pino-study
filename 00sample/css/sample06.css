@@ -1,0 +1,139 @@
+html {
+    font-size: 62.5%;
+}
+
+/* 基準となるフォントサイズ（今回であれば62.5%）を宣言しておくことでrem単位の本領発揮。emは直前の親のサイズと自身を比較してサイズを決定する。remは一番親を参照して比較する。 */
+
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+header h1 {
+    color: #FFF;
+}
+
+main {
+    width: 1000px;
+    height: 400px;
+    margin-top: 200px;
+    margin-left: 500px;
+}
+
+.base {
+    width: 100%;
+    background: #333;
+}
+
+.base>li {
+    float: left;
+    border-right: solid 1px #3D4F5A;
+}
+.base li{
+    background: #00152E;
+    width: 210px;
+    height: 50px;
+    
+}
+/* float: left で要素を左詰めに。コレ無いと縦で並んでしまいます。多分leftで合ってる */
+
+
+.base>li:first-child {
+    border-left: 0;
+    background: #FF6347;
+    width: 140px;
+}
+/* 最初のHOMEのところ。色はtomatoでも行ける。 */
+
+.base>li:first-child a:hover {
+    background: #DD5C30;
+}
+/* 最初のHOMEのところ。ホバーしたときの色。カラーピッカーで見れるよ。 */
+
+.base>li:hover .parent {
+    display: block;
+}
+/* parentクラスに対してブロック要素になるようにしてます。 */
+
+.base>li .parent {
+    display: none;
+}
+/* ブロック要素内に格納している子要素たち？これ解除したら一生出たままになる。この値を指定された要素は非表示になる。
+あくまで非表示になるだけで読み込まれない訳ではない。参考サイト↓
+https://saruwakakun.com/html-css/basic/display#section5 */
+
+.base>li .parent li {
+    background: #333;
+    border-bottom: dotted 1px #999;
+    border-left: 0;
+}
+/* ホバーしたときに出てくるやつら。作戦通り下部に点線入れてます。 */
+
+.child_navi li{
+    display: none;
+}
+
+.parent>li {
+    position: relative;
+    top: 0px;
+}
+
+.child_navi {
+    position: absolute;
+    top: 0;
+    left: 210px;
+}
+
+
+
+.base>li .parent>li:hover .child_navi li{
+    display: block;
+}
+
+.base>li .parent li:last-child {
+    border-bottom: 0;
+}
+/* ホバーしたときに出てくるやつら。最後だけ点線出ないようにしてます。 */
+
+.base>li .parent li a:hover {
+    background: #F2F2F2;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+/* htc12の範囲。リストにしたときに出てくる●とかイジれる。値を見たら分かるけどnoneは何も表示しない。 */
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 5;
+    color: #FFF;
+}
+    /* display: block で aタグをブロック要素にしてます！text-decoration: none;でリンク文字が青くなったり、
+    一度訪れると紫になったり、下線が引かれたりするのを無しにしてます。 */
+
+a:hover {
+    background: #333;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+small {
+    font-size: 80%;
+}
+/* 調べたところ、最後の下の文字？にaddressタグつけないときはpタグ内にsmallタグで表記するのが一般的らしい。 */

@@ -1,0 +1,84 @@
+.header {
+    color: #fff;
+    background: #000;
+    padding: 10px 20px 10px 20px;
+}
+
+.main {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.main > ul{
+    list-style: none;
+}
+
+/* 偶数奇数の設定
+(2n)、(even)→偶数、(2n+1)、(odd)→奇数 
+
+最初のやつ、最後のやつの設定
+タグ・クラス名など :first-child{}
+:last-child{} */
+
+.main li{
+    color: #fff;
+    text-indent: 0.5em;
+    margin: 1px 0;
+    transition: .3s;
+    height: 40px;
+    border: #000 solid 2px;
+}
+
+/* .main li:nth-child(2n):hover{
+    background: #c44c37;
+    cursor: pointer;
+}
+
+.main li:nth-child(2n+1):hover{
+    background: #6da7bf;
+    cursor: pointer;
+} */
+
+
+
+/* .main li:hover{
+    margin-left: 20px;
+} */
+
+
+
+/* .main li:nth-child(2n){
+    background: tomato;
+}
+
+.main li:nth-child(2n+1){
+    background: skyblue;
+} */
+
+.main li:nth-child(2n){
+    /* background: tomato; */
+}
+
+.main li:nth-child(2n+1){
+    /* background: skyblue; */
+}
+
+.main li span {
+    display: block;
+    height: 100%;
+    padding: 10px 0;
+    transition: .3s;
+}
+
+li:nth-child(2n)>span{
+    background: tomato;
+}
+
+li:nth-child(2n+1)>span{
+    background: skyblue;
+}
+
+li:hover span{
+    margin-left: 20px;
+    cursor: pointer;
+}

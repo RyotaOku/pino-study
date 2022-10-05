@@ -1,0 +1,43 @@
+p.ttl {
+    color: red;
+}
+
+p.txt {
+    background-color: tomato;
+    color: white;
+    letter-spacing: 10px;
+}
+/* background-color を入力したいとき、bgc → タブで一発入力可能。 
+letter-spacingで１文字だけにcssの適用可能。
+行に対してなにか行うときは line を使う*/
+
+p.border {
+    border-style: solid;
+    border-width: thin;
+    padding: 1rem;
+}
+/* border: solid 1px #333; が模範解答(solid=実線)
+padding: 20px; が模範解答(paddingは枠線内に空白を作る。
+marginを使用すれば、枠線外に空白を作る)*/
+
+p.borderTtl {
+    border-left-style:solid;
+    border-left-width: 15px;
+    border-bottom-style: dotted;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+p.borderTtl::first-letter {
+    color: red;
+    font-size: 1.6em;
+    padding-left: 0.3em;
+}
+/* first-letter は、最初の１文字にだけCSSを適用させたいときに使います */
+
+span.check {
+    background-color: white;
+    color:black;
+    font-weight: bold;
+}

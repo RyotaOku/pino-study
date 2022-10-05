@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>福村ですっ！</h1>
+    <input type="text" id="age">
+    <button id="btn">ボタン</button>
+
+
+    <script type="text/javascript">
+    console.log("Hello World");
+    let text = "あいうえお";
+    console.log("ひらがな：" + text);
+    // document.getElementById("btn").addEventListener("click",()=>{
+    //     console.log("クリックされた");
+    // });
+    let num = Number(document.getElementById("age").value);
+    console.log(num);
+    if(num=="10"){
+        console.log("ok");
+    }
+    else if(num >= 11){
+        console.log("okkk");
+    }
+    else{
+        console.log("ng");
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/js_sample03.css">
+</head>
+<body>
+
+    <button id="btn">ボタン</button>
+
+
+    <script type="text/javascript">
+
+    document.getElementById("btn").addEventListener("click",function(){
+    if(btn.style.backgroundColor=="pink"){
+        console.log("pinkでした")
+    }
+    else{
+        console.log("pinkちゃう");
+        btn.addEventListener("click",function(){
+            btn.style.backgroundColor = "skyblue"
+        });
+    };
+
+    btn.style.background = "pink";
+
+    console.log(btn.style.backgroundColor);
+    })
+
+    </script>
+</body>
+</html>
