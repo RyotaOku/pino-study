@@ -1,0 +1,29 @@
+body {
+  background: tomato;
+}
+
+.wrap {
+  width: 500px;
+  margin: 10px;
+  padding: 40px;
+  border: solid 1px tomato;
+}
+.wrap p {
+  color: tomato;
+}
+.wrap a {
+  display: block;
+}
+.wrap a:link, .wrap a:visited {
+  text-decoration: none;
+}
+.wrap a:hover {
+  background: #000;
+}
+
+.box {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: solid 1px tomato;
+}/*# sourceMappingURL=style.css.map */
