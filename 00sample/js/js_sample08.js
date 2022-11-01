@@ -5,7 +5,7 @@ console.log(box[0]);  // HTMLCollectionが出力される。[0]を入れると�
 
 
 
-const box = document.querySelectorAll('.box')
+// const box = document.querySelectorAll('.box')
 /* console.log(box[1]);  //NodeListが出力される。
 // Nodeとは要素1つ1つのこと。
 console.log(box[0]);
@@ -53,26 +53,39 @@ box.forEach((ele3,i) => {
 */
 
 
-
-
-
-
-window.addEventListener("mousemove",(evt)=>{
-  // console.log(evt.clientX);
-  let flg = false
-  box.onmousedown =function(){
-    flg = true
-  }
-  if (flg == true) {
-    var cliX = evt.clientX
-    var cliY = evt.clientY
-    box.forEach((element,i) => {
-      // element.addEventListener("mousedown",()=>{
-    element.style.left = cliX -element.offsetWidth / 2 + "px"
-    element.style.top = cliY -element.offsetHeight / 2 + "px"
-    })
-  } else {
-console.log("e");
-  }
-  })
+// window.addEventListener("mousemove",(evt)=>{
+//   // console.log(evt.clientX);
+//   let flg = false
+//   box.onmousedown =function(){
+//     flg = true
+//   }
+//   if (flg == true) {
+//     var cliX = evt.clientX
+//     var cliY = evt.clientY
+//     box.forEach((element,i) => {
+//       // element.addEventListener("mousedown",()=>{
+//     element.style.left = cliX -element.offsetWidth / 2 + "px"
+//     element.style.top = cliY -element.offsetHeight / 2 + "px"
+//     })
+//   } else {
+// console.log("e");
+//   }
+  // })
 // })
+
+const boxs = document.querySelectorAll(".box");
+
+box[0].addEventListener("mousedown",() => {
+    mouse = true;
+});
+box[0].addEventListener("mouseup",() => {
+    mouse = false;
+});
+
+window.addEventListener('mousemove',(evt)=> {
+    if(mouse){
+        box[0].style.left = evt.clientX-62.5 + "px";
+        // つかんだら強制ど真ん中
+        box[0].style.top = evt.clientY-62.5 + "px";
+    }
+});
