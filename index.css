@@ -1,0 +1,160 @@
+html,
+body {
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #000;
+  background: #fff;
+}
+
+header {
+  background: #000;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center
+}
+
+header h1 a {
+  font-size: 1.8rem;
+  padding-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+main .mainVisual {
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: url("https://source.unsplash.com/0LG_8VhzjNE") center center/ cover no-repeat;
+  position: relative;
+}
+
+main .mainVisual h2 {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  color: #fff;
+  width: 40%;
+  height: 400px;
+  font-size: clamp(3rem, 6vw, 10rem);
+  overflow: hidden;
+}
+
+main .mainVisual h2 span {
+  position: absolute;
+  bottom: 0;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+main .mainText {
+  width: 100%;
+  height: 500px;
+  border: solid 1px tomato;
+  position: relative;
+  background: #f2f2f2;
+  padding: 40px;
+}
+
+main .mainText h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 10px;
+}
+
+main .mainText>p {
+  text-align: center;
+  width: 60%;
+  border: solid 1px tomato;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+main .mainText .contentsBox {
+  position: absolute;
+  bottom: 40px;
+  height: 250px;
+  width: calc(100% - 80px);
+  border: solid 1px tomato;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+main .mainText .contentsBox section {
+  border: solid 1px tomato;
+  margin: 10px 0 0;
+  width: 49%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+main .mainText .contentsBox .contents {
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  border:solid 1px tomato;
+}
+
+main .mainText .contentsBox section h3 {
+  color: red;
+  font-size: 1.8rem;
+  position: relative;
+  padding: 5px 0 5px 10px;
+}
+
+main .mainText .contentsBox section p {
+  font-size: 1.2rem;
+padding-left: 10px;
+}
+
+main .mainText .contentsBox section h3::before {
+  content: "";
+  background-image: url("icon01.png");
+  background-size: 100%;
+  position: absolute;
+  width: 10%;
+  min-width: 25px;
+  height: 65px;
+  object-fit: cover;
+  display: block;
+  top: 0;
+  left: -12%;
+}
+
+main .navigation section:nth-child(1) {
+border:solid 1px tomato;
+width: 100%;
+height: 600px;
+padding: 40px;
+}
+
+main .navigation section:nth-child(1) .leftBox {
+  width: 60%;
+  height: 500px;
+  background: #ae0100;
+  color: #fff;
+border-radius: 12px;
+padding: 50px 15% 50px 30px;
+}
+
+main .navigation section:nth-child(1) .leftBox .navigation-textBox {
+  border:solid 1px skyblue;
+  height: 100%;
+  padding-left: 30px;
+}
+
+main .navigation section:nth-child(1) .leftBox .navigation-textBox h2 {
+  font-size: 2.4rem;
+margin-bottom: 12px;
+}
+
+main .navigation section:nth-child(1) .leftBox .navigation-textBox p {
+  width: 100%;
+}

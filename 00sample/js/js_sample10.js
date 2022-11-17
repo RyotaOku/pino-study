@@ -6,8 +6,9 @@ let image = document.querySelector("#black picture img")
 for (let i = 0; i < img.length; i++) {
   img[i].addEventListener("click", function (e) {
     let src = img[i].src
-    let aa = src.replace('s', 'l')
+    let aa = src.replace('_s', '_l')
     // console.log(src);
+    image.src = aa
     black.style.display = "block"
     black.style.display = "flex"
     // let ss = src.split("_")
@@ -17,7 +18,6 @@ for (let i = 0; i < img.length; i++) {
     // console.log(aa);
     // console.log(ee);
     // console.log(aa);
-    image.src = `${aa}`
   });
 }
 
