@@ -1,0 +1,42 @@
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+picture {
+  margin: 10px;
+  width: 400px;
+  height: 250px;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+#black {
+  position: fixed;
+  display: none;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: rgba(1, 1, 1, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#black picture {
+  position: absolute;
+  background: #fff;
+  width: 800px;
+  height: 600px;
+  padding: 10px;
+}

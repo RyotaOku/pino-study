@@ -1,0 +1,223 @@
+#chat {
+  width: 100%;
+  height: 88vh;
+  background: url("../img/ussr.png");
+  background-position: 50% 50%;
+  background-size: 20%;
+}
+
+#chat::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: blur(3px);
+}
+
+.footer {
+  width: 100%;
+  height: 12vh;
+  background: #fff;
+  position: relative;
+  z-index: 9999;
+}
+
+.input {
+  padding: 30px 20px;
+  height: 40px;
+  display: flex;
+  position: relative;
+}
+
+#msg {
+  border: solid 1px #acacac;
+  width: 60%;
+  height: 40px;
+}
+
+#msg:hover {
+  border: 1.2px solid #747474;
+}
+
+#send {
+  background: #eb6b6b;
+  color: #fff;
+  width: 19%;
+  height: 40px;
+}
+
+#send:hover {
+  background: #ff2e2e;
+}
+
+#clear {
+  background: #d4d4d4;
+  color: #fff;
+  width: 19%;
+  height: 40px;
+}
+
+#clear:hover {
+  background: #b9b9b9;
+}
+
+#hint {
+  background: red;
+  color: #fff;
+  margin: 5px 0 0 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.text {
+  width: 200px;
+  height: 80px;
+  border: solid 1px tomato;
+  border: 4px solid #fff;
+  border-radius: 16px;
+  background-color: #efefef;
+  font-size: 24px;
+  text-align: center;
+  line-height: 3;
+  position: relative;
+  top: 80px;
+  left: 40px;
+  animation-name: pui;
+  animation-duration: .3s;
+  position: absolute;
+}
+
+.text::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1.2rem solid transparent;
+  border-top-color: #fff;
+}
+
+.text::after {
+  position: absolute;
+  content: "";
+  top: 140%;
+  left: 20%;
+  width: 120px;
+  height: 20px;
+  border-radius: 120px / 20px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes pui {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: none;
+  }
+}
+
+.anime {
+  animation-name: puipui;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes puipui {
+  0% {
+    transform: scale(1, 1);
+    transform: translateY(0);
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(1.4, .4);
+    transform-origin: 50% 100%;
+  }
+
+  60% {
+    transform: scale(1, 1);
+    transform-origin: 50% 100%;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hint {
+  display: none;
+  position: absolute;
+  top: -50px;
+  right: 12px;
+  width: 500px;
+  height: 70px;
+  background: rgba(255, 254, 250, .9);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000000;
+  color: #000000;
+  font-size: 1rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+.hint:after,
+.hint:before {
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 95%;
+}
+
+.hint:after {
+  border-color: rgba(255, 254, 250, 0);
+  border-top-width: 22px;
+  border-bottom-width: 22px;
+  border-left-width: 11px;
+  border-right-width: 11px;
+  margin-left: -11px;
+  border-top-color: #FFFEFA;
+}
+
+.hint:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-top-width: 24px;
+  border-bottom-width: 24px;
+  border-left-width: 12px;
+  border-right-width: 12px;
+  margin-left: -12px;
+  margin-top: 1px;
+  border-top-color: #000000;
+}
+
+#hint:hover+.hint {
+  display: block;
+}
+.hint:hover{
+  display: block;
+}

@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <!-- DOM操作で同期処理  /  Ajaxで非同期処理 
+    <!-- DOM操作で同期処理  /  Ajaxで非同期処理
     DOM  - Document Object Model -->
     <h1>JavaScript</h1>
-    <p>alertでポップアップで文字出せる。[ alert("文字"); ]  →数値の場合はダブルコーテーション必要ない。</p>
+    <p>alertでポップアップで文字出せる。[ alert("文字"); ] →数値の場合はダブルコーテーション必要ない。</p>
 
     <input type="text"> + <input type="text"> = <input type="text" value="10" id="ans">
     <input type="button" value="足し算する" id="btn">
 
-<script type="text/javascript">
-    // alert("ぼくのなまえはせつしおんだ。");
-    // alert("共産主義は世界に広まるべき思想です。");
-    console.log("あたいはせつっぱあおきまんよ！");
-    // console.log(num);
-    let num;
-    console.log(num);
-    num = 10;
-    console.log(num);
+    <script type="text/javascript">
+        // alert("ぼくのなまえはせつしおんだ。");
+        // alert("共産主義は世界に広まるべき思想です。");
+        console.log("あたいはせつっぱあおきまんよ！");
+        // console.log(num);
+        let num;
+        console.log(num);
+        num = 10;
+        console.log(num);
 
-    num = 10;
-    let num2 = 20;
-    console.log("答えは:" + Number(num + num2));
+        num = 10;
+        let num2 = 20;
+        console.log("答えは:" + Number(num + num2));
 
-    console.log(document.getElementById("btn"));
-    const btn = document.getElementById("btn");
-    btn.addEventListener("click",()=>{
-        //クリックしたらやりたいことを書く
-        console.log("クリックされた");
-    });
+        console.log(document.getElementById("btn"));
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            //クリックしたらやりたいことを書く
+            console.log("クリックされた");
+        });
 
-    console.log(document.getElementById("ans").value);
-    document.getElementById("ans").value = 30;
-
-    
-
-</script>
+        console.log(document.getElementById("ans").value);
+        document.getElementById("ans").value = 30;
+    </script>
 </body>
+
 </html>

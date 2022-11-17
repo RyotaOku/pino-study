@@ -25,7 +25,7 @@ for(let i=0; i<100; i++){
 
 // ココからは解答です
 
-/* let out;
+let out;
 for (let i = 1; i <= 100; i++) {
     if(i % 3 === 0 && i % 5 === 0){
         out = "FizzBuzz";
@@ -44,15 +44,15 @@ for (let i = 1; i <= 100; i++) {
         out = i;
     }
     console.log(out);
-} */
-
-let out;
-for (let i = 1; i <= 40; i++) {
-    if (i % 3 == 0 || /3/.test(i)) {
-        out = i+"!!";
-    }
-    else{
-        out = i
-    }
-    console.log(out);
 }
+
+// let out;
+// for (let i = 1; i <= 40; i++) {
+//     if (i % 3 == 0 || /3/.test(i)) {
+//         out = i+"!!";
+//     }
+//     else{
+//         out = i
+//     }
+//     console.log(out);
+// }

@@ -73,19 +73,31 @@ box.forEach((ele3,i) => {
   // })
 // })
 
+
 const boxs = document.querySelectorAll(".box");
 
-box[0].addEventListener("mousedown",() => {
-    mouse = true;
+let rikuto;
+let num = 10
+let mouse = false
+
+boxs.forEach((e,i) => {
+  e.addEventListener("mousedown",(event) => {
+    console.log(event);
+      mouse = true;
+      rikuto = event.target;
+      num = num+=1
+      e.style.zIndex = num
+  });
+  e.addEventListener("mouseup",() => {
+      mouse = false;
+  });
 });
-box[0].addEventListener("mouseup",() => {
-    mouse = false;
-});
+
 
 window.addEventListener('mousemove',(evt)=> {
     if(mouse){
-        box[0].style.left = evt.clientX-62.5 + "px";
+        rikuto.style.left = evt.clientX-62.5 + "px";
         // つかんだら強制ど真ん中
-        box[0].style.top = evt.clientY-62.5 + "px";
+        rikuto.style.top = evt.clientY-62.5 + "px";
     }
 });

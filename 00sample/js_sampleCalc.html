@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css"> -->
+    <link rel="stylesheet" href="css/js_sample09.css">
+    <title>共産電卓</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .wrap {
+        display: flex;
+        height: 100vh;
+    }
+
+    .calcInput {
+        width: 50%;
+        height: 100%;
+        background: rgb(255, 216, 216);
+    }
+
+    .calcInput #num1 {
+        font-size: 1.2rem;
+        text-align: right;
+        width: 45%;
+        height: 40px;
+    }
+
+    .calcInput #cl {
+        width: 10%;
+        background: rgb(255, 105, 105);
+        color: #fff;
+    }
+
+    .calcInput #num2 {
+        font-size: 1.2rem;
+        text-align: right;
+        width: 45%;
+    }
+
+    .input {
+        border: solid 1px tomato;
+    }
+
+    .radio {
+        display: none;
+    }
+
+    .label {
+        display: flex;
+        border: solid 1px tomato;
+        width: 60px;
+        margin: 0 auto 0;
+        flex-wrap: wrap;
+    }
+
+    label {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: .8;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .label label:nth-of-type(1) {
+        background: #f00;
+    }
+
+    .label label:nth-of-type(2) {
+        background: #0f0;
+    }
+
+    .label label:nth-of-type(3) {
+        background: #00f;
+    }
+
+    .label label:nth-of-type(4) {
+        background: #fff;
+    }
+
+    .radio:checked+label {
+        background: #000;
+    }
+
+    .calc {
+        width: 50%;
+        height: 100%;
+        background: rgb(255, 250, 202);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="calcInput">
+            <div class="input">
+                <input type="number" name="" id="num1">
+                <input type="text" id="cl" value="" readonly>
+                <input type="number" name="" id="num2">
+            </div>
+            <div class="label">
+                <input type="radio" name="calc" id="kake" value="*" class="radio">
+                <label for="kake">×</label>
+
+                <input type="radio" name="calc" id="wari" value="/" class="radio">
+                <label for="wari">÷</label>
+
+                <input type="radio" name="calc" id="tasu" value="+" class="radio">
+                <label for="tasu">+</label>
+
+                <input type="radio" name="calc" id="hiku" value="-" class="radio">
+                <label for="hiku">-</label>
+            </div>
+
+            <input type="button" value="計算する" id="set">
+
+            <input type="text" value="1" id="answer" readonly>
+
+        </div>
+        <div class="calc">
+            <input type="text" value="" id="monitor" readonly>
+            <input type="button" value="1" id="1" class="btn">
+            <input type="button" value="2" id="2" class="btn">
+            <input type="button" value="3" id="3" class="btn">
+            <input type="button" value="4" id="4" class="btn">
+            <input type="button" value="5" id="5" class="btn">
+            <input type="button" value="6" id="6" class="btn">
+            <input type="button" value="7" id="7" class="btn">
+            <input type="button" value="8" id="8" class="btn">
+            <input type="button" value="9" id="9" class="btn">
+            <input type="button" value="0" id="0" class="btn">
+            <input type="button" value="+" id="+" class="btn">
+            <input type="button" value="-" id="-" class="btn">
+            <input type="button" value="×" id="*" class="btn">
+            <input type="button" value="÷" id="/" class="btn">
+            <input type="button" value="=" id="=" class="btn">
+            <input type="button" value="c" id="c" class="btn">
+
+        </div>
+    </div>
+    <script src="js/js_sampleCalc.js"></script>
+</body>
+
+</html>
