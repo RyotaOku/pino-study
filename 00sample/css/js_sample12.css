@@ -80,7 +80,7 @@ picture img {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
   animation: kieru .3s;
 }
 

@@ -28,7 +28,7 @@ function send() {
   var newContent = document.createTextNode(text); // テキストノードを作成
   newElement.appendChild(newContent); // div要素にテキストノードを追加
   newElement.setAttribute("class", "text"); // div要素にclassを設定
-  newElement.setAttribute("style", style); // div要素にclassを設定
+  newElement.setAttribute("style", style); // div要素にstyleを設定
 
   // ----------------------------
   // 親要素の最初の子要素を追加
