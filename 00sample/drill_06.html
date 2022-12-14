@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,88 +8,128 @@
   <link rel="stylesheet" href="css/ress.css">
   <title>Document</title>
   <style type="text/css">
-    .wrap{
+    .wrap {
       height: 500vh;
       padding: 20px;
     }
-    .wrap h1{
+
+    .wrap h1 {
       font-size: 48px;
       text-align: center;
       height: 100vh;
       background: #2a242a;
       color: #FFF;
     }
-    section{
+
+    section {
       display: flex;
       width: 900px;
       margin: 80px auto;
       padding: 80px;
       border: solid 1px #333;
     }
-    section:nth-of-type(2){
+
+    section:nth-of-type(2) {
       flex-direction: row-reverse;
     }
-    section h2{
+
+    section h2 {
       border-bottom: solid 3px #333;
       padding-bottom: 20px;
       margin: 20px 0 0 20px;
     }
-    section p{
+
+    section p {
       width: 450px;
       padding: 40px;
     }
-    figure{
-      width: 100%;
-    }
-    figure img{
+
+    figure {
       width: 100%;
     }
 
-  .msgWrap:nth-of-type(even) {
-    transform: translateX(-200%);
-  }
-  .msgWrap:nth-of-type(odd) {
-    transform: translateX(200%);
-  }
-  .msgWrap.show {
-    transform: translateX(0);
-  }
-  .msgWrap:nth-of-type(even) figure img{
-    transform: translateX(-200%);
-  }
-  .msgWrap:nth-of-type(odd) {
-    transform: translateX(200%);
-  }
-  .msgWrap.show {
-    transform: translateX(0);
-  }
+    figure img {
+      width: 100%;
+    }
+
+    .wrap section:nth-of-type(even) .msgWrap {
+      transform: translateX(-100%);
+      transition: .5s;
+      opacity: 0;
+    }
+
+    .wrap section:nth-of-type(even) figure{
+      transform: translateX(-180%);
+      transition: .5s;
+      opacity: 0;
+    }
+
+    .wrap section:nth-of-type(odd) .msgWrap{
+      transform: translateX(100%);
+      transition: .5s;
+      opacity: 0;
+    }
+    .wrap section:nth-of-type(odd) figure{
+      transform: translateX(180%);
+      transition: .5s;
+      opacity: 0;
+    }
+
+    .wrap section:nth-of-type(even) .msgWrap.show{
+      transform: translateX(0);
+      transition: .5s;
+      opacity: 1;
+    }
+
+    .wrap section:nth-of-type(even) .show+figure{
+      transform: translateX(0);
+      transition: .5s;
+      opacity: 1;
+    }
+
+    .wrap section:nth-of-type(odd) .msgWrap.show{
+      transform: translateX(0);
+      transition: .5s;
+      opacity: 1;
+    }
+    .wrap section:nth-of-type(odd) .show+figure{
+      transform: translateX(0);
+      transition: .5s;
+      opacity: 1;
+    }
+
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <h1>Page Scroll</h1>
     <section>
       <div class="msgWrap">
         <h2>Photo 01</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
       </div>
       <figure><img src="img/drill06_01.jpg" alt=""></figure>
     </section>
     <section>
       <div class="msgWrap">
         <h2>Photo 02</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
       </div>
       <figure><img src="img/drill06_02.jpg" alt=""></figure>
     </section>
     <section>
       <div class="msgWrap">
         <h2>Photo 01</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. </p>
       </div>
       <figure><img src="img/drill06_03.jpg" alt=""></figure>
     </section>
   </div>
   <script src="js/drill06.js"></script>
 </body>
+
 </html>

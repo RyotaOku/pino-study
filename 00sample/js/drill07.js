@@ -17,3 +17,43 @@ Out:-3000 Charge:2000 Remaining:800
 
 利用履歴のli要素は削除しておくこと
 */
+
+const balanceForm = document.getElementById('cash');
+const price = document.getElementById('bill');
+const sendButton = document.getElementById('send');
+
+const history = document.getElementById('history');
+
+let balance = 3000;
+
+sendButton.addEventListener('click', function () {
+  let priceValue = price.value;
+  
+  if (priceValue === "") {
+    alert('中身が空です。正しい数値を入力してください。')
+  } else if (priceValue.includes("-")) {
+    alert('無効な数値です。正しい数値を入力してください。')
+  } else if (!isNaN(priceValue)) {
+    let priceNum = parseInt(priceValue);
+    let balanceNum = balance - priceNum
+    balance = balanceNum
+    
+    balanceForm.innerText = balanceNum
+    
+    // if(-1000 < balanceNum < 1000){
+    //   balanceNum + 1000;
+    //   console.log(balanceNum);
+    // } else if (balanceNum < ){
+
+    // }
+    for (balanceNum; balanceNum < 1000; balanceNum + 1000){
+      console.log(balanceNum);
+      balanceNum + 1000
+      console.log(balanceNum);
+console.log("1000円未満");
+    }
+  } else {
+    alert('文字列は入力できません。正しい数値を入力してください。')
+  }
+  price.value = ""
+})
