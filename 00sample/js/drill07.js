@@ -25,10 +25,11 @@ const sendButton = document.getElementById('send');
 const history = document.getElementById('history');
 
 let balance = 3000;
+const numnum = 1000
 
 sendButton.addEventListener('click', function () {
   let priceValue = price.value;
-  
+
   if (priceValue === "") {
     alert('中身が空です。正しい数値を入力してください。')
   } else if (priceValue.includes("-")) {
@@ -37,21 +38,41 @@ sendButton.addEventListener('click', function () {
     let priceNum = parseInt(priceValue);
     let balanceNum = balance - priceNum
     balance = balanceNum
-    
-    balanceForm.innerText = balanceNum
-    
-    // if(-1000 < balanceNum < 1000){
-    //   balanceNum + 1000;
-    //   console.log(balanceNum);
-    // } else if (balanceNum < ){
 
-    // }
-    for (balanceNum; balanceNum < 1000; balanceNum + 1000){
+    
+    let list = document.createElement('li');
+    // list.textContent = `Out:-${priceValue} Charge:${0} Remaining:${balanceNum}`
+    
+    if(balance == 3000){
+      let priceNum = parseInt(priceValue);
+      balanceNum = (priceNum - 3000) + 1000;
       console.log(balanceNum);
-      balanceNum + 1000
-      console.log(balanceNum);
-console.log("1000円未満");
+    } else if(balance < 2000){
+      let priceNum = parseInt(priceValue);
+      balanceNum = priceNum + 1000;
+      // console.log(balanceNum);
     }
+
+    // if(balanceNum < 1000){
+    //   let priceNum = parseInt(priceValue);
+    //   balanceNum = priceNum + 1000;
+    //   console.log(balanceNum);
+    // }
+    //     for (let i = balanceNum; i < numnum; i + 1000) {
+      //       tasi += 0
+    //       // console.log(i);
+    //       tasi += 1000
+    //       console.log(tasi);
+    //       console.log("---------------");
+    //   i += 1000
+    //   // console.log(i);
+    //   // console.log("1000円未満");
+    //   balanceForm.innerText = i
+    //   balanceNum = i
+    // }
+    balanceForm.innerText = balanceNum
+    list.textContent = `Out:-${priceValue} Charge:${priceNum + 1000} Remaining:${balanceNum}`
+    history.appendChild(list)
   } else {
     alert('文字列は入力できません。正しい数値を入力してください。')
   }
